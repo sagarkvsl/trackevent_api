@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Brevo - Track Event</title>
+    <style>
+        body {
+            background-color: #333;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            background-color: #40a347;
+            color: #fff;
+            padding: 10px;
+        }
+        form {
+            background-color: #444;
+            padding: 20px;
+            border: 1px solid #666;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        label {
+            color: #fff;
+        }
+        input[type="text"], textarea {
+            background-color: #555;
+            color: #fff;
+            border: 1px solid #666;
+            border-radius: 3px;
+            padding: 5px;
+        }
+        input[type="submit"] {
+            background-color: #40a347;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Brevo Track Event API - Automation</h1>
+    <form action="/track_event" method="POST">
+        <label for="ma_key">MA Key:</label>
+        <input type="text" name="ma_key" id="ma_key" required><br><br>
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email" required><br><br>
+        <label for="event">Event:</label>
+        <input type="text" name="event" id="event" required><br><br>
+        <label for="eventdata">Event Data (JSON):</label><br>
+        <textarea name="eventdata" id="eventdata" rows="5" cols="50"></textarea><br><br>
+        <input type="submit" value="Track Event">
+    </form>
+</body>
+</html>
